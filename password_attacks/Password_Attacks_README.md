@@ -3,7 +3,7 @@
 ## Requirements
 Any environment capable of running Python and a password cracker like hashcat or John the Ripper should suffice.
 
-My lab environment for this is a Kali 2020.3 virtual machine and a MacBook Pro running hashcat.
+My lab environment for this is a Kali 2020.3 virtual machine
 
 ## Linux Setup
 1. Install Kali Linux
