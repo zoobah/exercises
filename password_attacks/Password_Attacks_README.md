@@ -49,7 +49,7 @@ My lab environment for this is a Kali 2020.3 virtual machine
 
 4. Download and Unzip this repository
 
-* (https://github.com/zoobah/exercises/password_attacks/archive/master.zip)
+* (https://github.com/zoobah/exercises/archive/main.zip)
 
 ## Exercises
 
