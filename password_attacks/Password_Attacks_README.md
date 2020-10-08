@@ -10,8 +10,8 @@ My lab environment for this is a Kali 2020.3 virtual machine and a MacBook Pro r
 * Kali VMs can be downloaded for free from Offensive Security's Website (https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/)
 
 2. Install Hashcat or John the Ripper.
-
-* In Linux environments, Hashcat or John the Ripper can be installed via your package manager. John the Ripper and Hashcat come pre-installed on the Kali VM.
+* John the Ripper and Hashcat come pre-installed on the Kali VM.
+* In other Linux environments, Hashcat or John the Ripper can be installed via your package manager, e.g. apt
 - $ ```sudo apt install hashcat``` 
 - $ ```sudo apt install john```
 
@@ -29,7 +29,7 @@ My lab environment for this is a Kali 2020.3 virtual machine and a MacBook Pro r
 
 5. Clone this repository
 
-* $ ```git clone https://github.com/zoobah/password_attacks```
+* $ ```git clone https://github.com/zoobah/exercises```
 
 6. (Optional) Install nodejs for password guessing attack
 
