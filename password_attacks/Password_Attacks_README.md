@@ -67,6 +67,10 @@ My lab environment for this is a Kali 2020.3 virtual machine
 
 * kali@kali:~/exercises/password_attacks/cracking$ ```sudo hashcat -m 1000 -r rules/best64.rule ntlm_hashes_medium.txt /usr/share/wordlist/rockyou.txt```
 
-3. Create a report from the DPAT sample_data and explore the various options
+* Try other rule sets and crack more passwords!
+
+### DPAT
+
+1. Create a report from the DPAT sample_data and explore the various options
 
 * kali@kali:~/DPAT$ ```python3 dpat.py -n sample_data/customer.ntds -c sample_data/oclHashcat.pot -o customer.html -g sample_data/*.txt```
