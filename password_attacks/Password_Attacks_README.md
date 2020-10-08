@@ -6,25 +6,32 @@ Any environment capable of running Python and a password cracker like hashcat or
 My lab environment for this is a Kali 2020.3 virtual machine and a MacBook Pro running hashcat.
 
 ## Linux Setup
-1. Kali Linux - Kali VMs can be downloaded for free from Offensive Security's Website.
+1. Install Kali Linux
+* Kali VMs can be downloaded for free from Offensive Security's Website (https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/)
 
-* (https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/)
+2. Install Hashcat or John the Ripper.
 
-2. In Linux environments, Hashcat or John the Ripper can be installed via your package manager. John the Ripper comes pre-installed on the Kali VM.
+* In Linux environments, Hashcat or John the Ripper can be installed via your package manager. John the Ripper and Hashcat come pre-installed on the Kali VM.
+- $ ```sudo apt install hashcat``` 
+- $ ```sudo apt install john```
 
-* $ ```sudo apt install hashcat``` 
+3. Install the Rockyou list
 
-* $ ```sudo apt install john```
+* Rockyou is pre-installed on Kali, but you must first decompress the file before use
+- ```sudo gunzip /usr/share/wordlists/rockyou.txt.gz```
+* Other Linux distros can follow these steps
+- $ ```wget https://github.com/danielmiessler/SecLists/raw/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz```
+- $ ```tar zxvf rockyou.txt.tar.gz```
 
-3. Clone the repository for the Domain Password Audit Tool
+4. Clone the repository for the Domain Password Audit Tool
 
 * $ ```git clone https://github.com/clr2of8/DPAT```
 
-4. Clone this repository
+5. Clone this repository
 
 * $ ```git clone https://github.com/zoobah/password_attacks```
 
-5. (Optional) Install nodejs for password guessing attack
+6. (Optional) Install nodejs for password guessing attack
 
 ## Windows Setup
 
@@ -42,5 +49,15 @@ My lab environment for this is a Kali 2020.3 virtual machine and a MacBook Pro r
 
 4. Download and Unzip this repository
 
-* (https://github.com/zoobah/password_attacks/archive/master.zip)
+* (https://github.com/zoobah/exercises/password_attacks/archive/master.zip)
+
+## Exercises
+
+### Password Cracking
+
+Use Hashcat or John the Ripper to crack the passwords in ntlm_hashes_easy.txt
+
+sudo john windows7_sam.dump --format=nt --wordlist=/usr/share/wordlist/rockyou.txt
+
+
 
