@@ -61,16 +61,16 @@ My lab environment for this is a Kali 2020.3 virtual machine
 
 * kali@kali:~/exercises/password_attacks/cracking$ ```sudo hashcat -m 1000 ntlm_hashes_easy.txt /usr/share/wordlist/rockyou.txt```
 
+* kali@kali:~/exercises/password_attacks/cracking$ ```sudo john ntlm_hashes_easy.txt --rules --format=nt --wordlist=/usr/share/wordlist/rockyou.txt```
+
+* kali@kali:~/exercises/password_attacks/cracking$ ```sudo hashcat -m 1000 -r /usr/share/hashcat/rules/best64.rule ntlm_hashes_easy.txt /usr/share/wordlist/rockyou.txt```
+
 2. Use Hashcat or John the Ripper to crack the passwords in ntlm_hashes_medium.txt
 
 * kali@kali:~/exercises/password_attacks/cracking$ ```sudo john ntlm_hashes_medium.txt --rules --format=nt --wordlist=/usr/share/wordlist/rockyou.txt```
 
-* kali@kali:~/exercises/password_attacks/cracking$ ```sudo hashcat -m 1000 -r rules/best64.rule ntlm_hashes_medium.txt /usr/share/wordlist/rockyou.txt```
+* kali@kali:~/exercises/password_attacks/cracking$ ```sudo hashcat -m 1000 -r /usr/share/hashcat/rules/best64.rule ntlm_hashes_medium.txt /usr/share/wordlist/rockyou.txt```
 
-* Try other rule sets and crack more passwords!
-
-### DPAT
-
-1. Create a report from the DPAT sample_data and explore the various options
+3. Create a report from the DPAT sample_data and explore the various options
 
 * kali@kali:~/DPAT$ ```python3 dpat.py -n sample_data/customer.ntds -c sample_data/oclHashcat.pot -o customer.html -g sample_data/*.txt```
